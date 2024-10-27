@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "TEetK7QaTng=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Lovidev\\Documents\\GitHub\\github_profile_scraper\\github_profile_scraper.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Lovidev\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

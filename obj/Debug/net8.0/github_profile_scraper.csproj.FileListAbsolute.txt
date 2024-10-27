@@ -1,0 +1,17 @@
+C:\Users\Lovidev\Documents\GitHub\github_profile_scraper\bin\Debug\net8.0\github_profile_scraper.exe
+C:\Users\Lovidev\Documents\GitHub\github_profile_scraper\bin\Debug\net8.0\github_profile_scraper.deps.json
+C:\Users\Lovidev\Documents\GitHub\github_profile_scraper\bin\Debug\net8.0\github_profile_scraper.runtimeconfig.json
+C:\Users\Lovidev\Documents\GitHub\github_profile_scraper\bin\Debug\net8.0\github_profile_scraper.dll
+C:\Users\Lovidev\Documents\GitHub\github_profile_scraper\bin\Debug\net8.0\github_profile_scraper.pdb
+C:\Users\Lovidev\Documents\GitHub\github_profile_scraper\obj\Debug\net8.0\github_profile_scraper.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lovidev\Documents\GitHub\github_profile_scraper\obj\Debug\net8.0\github_profile_scraper.AssemblyInfoInputs.cache
+C:\Users\Lovidev\Documents\GitHub\github_profile_scraper\obj\Debug\net8.0\github_profile_scraper.AssemblyInfo.cs
+C:\Users\Lovidev\Documents\GitHub\github_profile_scraper\obj\Debug\net8.0\github_profile_scraper.csproj.CoreCompileInputs.cache
+C:\Users\Lovidev\Documents\GitHub\github_profile_scraper\obj\Debug\net8.0\github_profile_scraper.dll
+C:\Users\Lovidev\Documents\GitHub\github_profile_scraper\obj\Debug\net8.0\refint\github_profile_scraper.dll
+C:\Users\Lovidev\Documents\GitHub\github_profile_scraper\obj\Debug\net8.0\github_profile_scraper.pdb
+C:\Users\Lovidev\Documents\GitHub\github_profile_scraper\obj\Debug\net8.0\github_profile_scraper.genruntimeconfig.cache
+C:\Users\Lovidev\Documents\GitHub\github_profile_scraper\obj\Debug\net8.0\ref\github_profile_scraper.dll
+C:\Users\Lovidev\Documents\GitHub\github_profile_scraper\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\Lovidev\Documents\GitHub\github_profile_scraper\obj\Debug\net8.0\github_profile_scraper.csproj.AssemblyReference.cache
+C:\Users\Lovidev\Documents\GitHub\github_profile_scraper\obj\Debug\net8.0\github_p.112A46BE.Up2Date
