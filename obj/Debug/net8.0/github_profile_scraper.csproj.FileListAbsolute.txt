@@ -15,3 +15,4 @@ C:\Users\Lovidev\Documents\GitHub\github_profile_scraper\obj\Debug\net8.0\ref\gi
 C:\Users\Lovidev\Documents\GitHub\github_profile_scraper\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\Lovidev\Documents\GitHub\github_profile_scraper\obj\Debug\net8.0\github_profile_scraper.csproj.AssemblyReference.cache
 C:\Users\Lovidev\Documents\GitHub\github_profile_scraper\obj\Debug\net8.0\github_p.112A46BE.Up2Date
+C:\Users\Lovidev\Documents\GitHub\github_profile_scraper\obj\Debug\net8.0\github_profile_scraper.sourcelink.json

@@ -1,15 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Net.Http;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using System.Linq;
 
 public class Program
 {
     static async Task Main(string[] args)
     {
-        string username = "LovisottoSantiago"; 
-        var repositories = await GetGitHubRepositories(username);
+        string username = "LovisottoSantiago";
+        #pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
+        string token = Environment.GetEnvironmentVariable("GITHUB_TOKEN");
+        #pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
+        var repositories = await GetGitHubRepositories(username, token); // Pasa el token aquí
 
         // Filtrar por Topics
         var filteredRepositories = FilterRepositories(repositories, new List<string> { "portfolio-project", "university-project" });
@@ -17,12 +22,20 @@ public class Program
         // Convertir a JSON
         string json = JsonConvert.SerializeObject(filteredRepositories, Formatting.Indented);
         Console.WriteLine(json);
+        System.IO.File.WriteAllText("repositorios.json", json);
     }
 
-    static async Task<List<Repo>> GetGitHubRepositories(string username)
+    static async Task<List<Repo>> GetGitHubRepositories(string username, string? token) // El token es nullable
     {
+        if (token == null)
+        {
+            throw new ArgumentNullException(nameof(token), "El token de GitHub no puede ser nulo.");
+        }
+
         using (HttpClient client = new HttpClient())
         {
+            client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Token", token);
+
             string url = $"https://api.github.com/users/{username}/repos";
             client.DefaultRequestHeaders.UserAgent.ParseAdd("request"); // Necesario para que la API funcione
 
@@ -30,12 +43,11 @@ public class Program
             var repositories = JsonConvert.DeserializeObject<List<Repo>>(response);
 
             // Obtener Topics para cada repositorio
-            #pragma warning disable CS8602 // Dereference of a possibly null reference.
             foreach (var repo in repositories)
             {
                 repo.Topics = await GetRepoTopics(client, username, repo.Name);
+                repo.Images = new List<string>(); // Espacio en blanco para imágenes
             }
-            #pragma warning restore CS8602 // Dereference of a possibly null reference.
 
             return repositories;
         }
@@ -48,9 +60,7 @@ public class Program
 
         var response = await client.GetStringAsync(url);
         var topicsResponse = JsonConvert.DeserializeObject<TopicsResponse>(response);
-        #pragma warning disable CS8602 // Dereference of a possibly null reference.
         return topicsResponse.Topics;
-        #pragma warning restore CS8602 // Dereference of a possibly null reference.
     }
 
     static List<Repo> FilterRepositories(List<Repo> repositories, List<string> keywords)
@@ -58,7 +68,6 @@ public class Program
         var filtered = new List<Repo>();
         foreach (var repo in repositories)
         {
-            // Verifica si alguno de los Topics contiene alguna de las palabras clave
             if (repo.Topics != null && repo.Topics.Any(topic => keywords.Any(keyword => topic.Contains(keyword, StringComparison.OrdinalIgnoreCase))))
             {
                 filtered.Add(repo);

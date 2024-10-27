@@ -1,0 +1,29 @@
+[
+  {
+    "Name": "Bacclean-Chronicles",
+    "Description": "Libgdx platform game, souls-like, metroidvania",
+    "html_url": "https://github.com/LovisottoSantiago/Bacclean-Chronicles",
+    "Topics": [
+      "portfolio-project"
+    ],
+    "Images": []
+  },
+  {
+    "Name": "SayIt",
+    "Description": "A desktop app that helps users improve their English-speaking abilities through targeted phrase generation, TTS integration, and voice recognition. Get real-time feedback on pronunciation accuracy using the Levenshtein distance algorithm. Perfect for language learners and those looking to enhance their spoken fluency.",
+    "html_url": "https://github.com/LovisottoSantiago/SayIt",
+    "Topics": [
+      "portfolio-project"
+    ],
+    "Images": []
+  },
+  {
+    "Name": "TPF_CTEDyA_COM1_LovisottoSantiago",
+    "Description": "Trabajo final de la materia CTEDyA UNAJ.",
+    "html_url": "https://github.com/LovisottoSantiago/TPF_CTEDyA_COM1_LovisottoSantiago",
+    "Topics": [
+      "university-project"
+    ],
+    "Images": []
+  }
+]
